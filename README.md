@@ -9,12 +9,12 @@
 安装步骤
 ---------------
 1. 导入SQL文件到mysql
->	giftbag.sql
+  *	giftbag.sql
 2. 配置protected/config/的db.php、redis.php
 3. 命令行-生成礼包码
->	protected/commands/GiftBagCommand.php generate 1 100
+  *	protected/commands/GiftBagCommand.php generate 1 100
 4. crontab加入定时命令（可选）
->	protected/commands/GiftBagCommand.php sync
+  *	protected/commands/GiftBagCommand.php sync
 5. 访问index.php
 
 
