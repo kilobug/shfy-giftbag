@@ -1,0 +1,13 @@
+<?php
+defined('WEB_ROOT') or die('Access denied!');
+
+class Util {
+	static function validateCaptcha($captcha, $key = 'captcha') {
+		$oldCaptcha = $_SESSION[$key];
+		if(empty($oldCaptcha) == false) {
+			$_SESSION[$key] = null;
+			return $oldCaptcha == strtolower(trim($captcha));
+		}
+		return false;
+	}
+}
